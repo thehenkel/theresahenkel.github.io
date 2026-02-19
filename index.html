@@ -70,21 +70,19 @@ nav a:hover { color: var(--fg); text-decoration: none; }
 
     /* ─── Main layout ───────────────────────────────────────── */
 main {
-  margin: 56px auto 0;   /* auto zentriert die Seite */
+  margin: 56px auto 0;
   max-width: 780px;
   padding: 4rem 3rem 6rem;
+  text-align: center;
 }
-
     /* ─── Hero / About ──────────────────────────────────────── */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 180px;
-      gap: 3rem;
-      align-items: start;
-      padding-bottom: 4rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
+   .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--rule);
+}
     .hero-text h1 {
       font-size: 2.4rem;
       font-weight: 400;
@@ -108,12 +106,12 @@ main {
       margin-bottom: 1.5rem;
     }
 
-    .hero-text p {
-      font-size: 1rem;
-      max-width: 560px;
-      margin-bottom: 1.2rem;
-      color: #2e2e2a;
-    }
+.hero-text p {
+  font-size: 1rem;
+  max-width: 560px;
+  margin: 0 auto 1.2rem;   /* auto links/rechts zentriert den Absatz */
+  color: #2e2e2a;
+}
 
     .cv-link {
       display: inline-block;
@@ -131,12 +129,13 @@ main {
       text-decoration: none;
     }
 
-    .hero-photo img {
-      width: 100%;
-      display: block;
-      filter: grayscale(15%);
-      border: 1px solid var(--rule);
-    }
+ .hero-photo img {
+  width: 100%;
+  display: block;
+  filter: grayscale(15%);
+  border: 1px solid var(--rule);
+  margin: 0 auto;           /* Foto zentrieren */
+}
 
     /* ─── Sections ──────────────────────────────────────────── */
     section { padding: 4rem 0; border-bottom: 1px solid var(--rule); }
