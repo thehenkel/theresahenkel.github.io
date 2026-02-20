@@ -284,15 +284,26 @@ main {
     .contact-box p { color: var(--bg); }
 
     /* ─── Mobile ────────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      nav { height: auto; }
-      .nav-inner { padding: 1rem 2rem; grid-template-columns: 1fr; gap: 0.5rem; height: auto; }
-      .nav-links { justify-content: flex-start; flex-wrap: wrap; gap: 1rem; }
-      main { padding: 2rem 2rem 4rem; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-photo { display: none; }
-      .contact-box { grid-template-columns: 1fr; padding: 2rem; }
-    }
+   @media (max-width: 900px) {
+  nav { height: auto; }
+  .nav-inner { padding: 1rem 2rem; grid-template-columns: 1fr; gap: 0.5rem; height: auto; }
+  .nav-links { justify-content: flex-start; flex-wrap: wrap; gap: 1rem; }
+  main { padding: 2rem 2rem 4rem; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;   /* Text zuerst, dann Foto */
+  }
+
+  .hero-photo {
+    display: block;
+    width: 70%;
+    margin: 2rem auto 0;      /* zentriert unter dem Text */
+  }
+
+  .contact-box { grid-template-columns: 1fr; padding: 2rem; }
+}
   </style>
 </head>
 <body>
