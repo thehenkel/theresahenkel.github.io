@@ -149,13 +149,31 @@
       text-decoration: none;
     }
 
-    .hero-photo img {
-      width: 100%;
-      display: block;
-      filter: grayscale(15%);
-      border: 1px solid var(--rule);
-    }
+.hero-photo {
+  position: relative;
+  padding-bottom: 12px;  /* Platz für den versetzten Rahmen */
+  padding-right: 12px;
+}
 
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border: 2px solid var(--mid);  /* Rahmenfarbe */
+  z-index: 0;
+}
+
+.hero-photo img {
+  position: relative;
+  width: 100%;
+  display: block;
+  filter: grayscale(15%);
+  border: 1px solid var(--rule);
+  z-index: 1;  /* Foto liegt über dem Rahmen */
+}
     /* ─── Sections ──────────────────────────────────────────── */
     section { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
     section:last-child { border-bottom: none; }
@@ -282,7 +300,7 @@
 
 <nav>
   <div class="nav-inner">
-    <div class="nav-name">T. Henkel</div>
+    <div class="nav-name">Theresa Henkel</div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -311,7 +329,7 @@
         <a class="cv-link" href="CV (3).pdf" target="_blank">Curriculum Vitae</a>
       </div>
       <div class="hero-photo">
-        <img src="Foto2.JPG" alt="Theresa Henkel" />
+        <img src="Foto.JPG" alt="Theresa Henkel" />
       </div>
     </div>
   </section>
