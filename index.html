@@ -94,8 +94,8 @@
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 1.5rem;   /* war: 5rem */
+  grid-template-columns: 1fr 380px;   /* war: 280px */
+  gap: 1.5rem;
   align-items: start;
   padding-bottom: 5rem;
   border-bottom: 1px solid var(--rule);
@@ -151,8 +151,8 @@
 
 .hero-photo {
   position: relative;
-  padding-bottom: 12px;  /* Platz für den versetzten Rahmen */
-  padding-right: 12px;
+  padding-bottom: 16px;
+  padding-right: 16px;
 }
 
 .hero-photo::after {
@@ -160,9 +160,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
-  border: 2px solid var(--mid);  /* Rahmenfarbe */
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 2px solid var(--rule);   /* gleiche Farbe wie Trennlinien */
   z-index: 0;
 }
 
@@ -171,8 +171,8 @@
   width: 100%;
   display: block;
   filter: grayscale(15%);
-  border: 1px solid var(--rule);
-  z-index: 1;  /* Foto liegt über dem Rahmen */
+  border: none;
+  z-index: 1;
 }
     /* ─── Sections ──────────────────────────────────────────── */
     section { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
